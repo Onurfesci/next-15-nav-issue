@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "files": [
+    "../../packages/aspire-ui/src/types/global.d.ts",
+    "../../packages/aspire-shared/src/types/sanity.types.ts",
+    "../../packages/aspire-shared/src/types/utils.d.ts"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@aspire/ui/internal/*": ["../../packages/aspire-ui/src/*"],
+      "@aspire/shared/internal/*": ["../../packages/aspire-shared/src/*"]
+    },
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "preserveSymlinks": true
+  },
+  "exclude": ["node_modules"]
+}

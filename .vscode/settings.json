@@ -1,0 +1,16 @@
+{
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "i18n-ally.localesPaths": [
+    "apps/webapp-customer/messages",
+    "apps/webapp-backoffice/messages"
+  ],
+  "i18n-ally.sourceLanguage": "en-GB",
+  "i18n-ally.extract.keygenStyle": "camelCase",
+  "i18n-ally.enabledFrameworks": ["next-intl"],
+  "i18n-ally.keystyle": "nested",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsserver.nodePath": "node",
+  "eslint.useFlatConfig": true,
+  "eslint.run": "onSave"
+}

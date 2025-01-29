@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig/nextjs.tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node", "@percy/cypress", "@serwist/next/typings"],
+    "lib": ["dom", "dom.iterable", "esnext", "WebWorker"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", ".next"]
+}

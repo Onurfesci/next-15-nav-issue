@@ -1,0 +1,30 @@
+@keyframes loadingAnimation {
+  0% {
+    width: 130px;
+  }
+  50% {
+    width: 150px;
+  }
+  100% {
+    width: 130px;
+  }
+}
+
+#globalLoader {
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEF2EE;
+  transition: opacity 250ms ease-in-out 0ms;
+  opacity: 1;
+}
+
+#globalLoaderSpinner {
+  animation: loadingAnimation 1200ms infinite ease-in-out;
+}

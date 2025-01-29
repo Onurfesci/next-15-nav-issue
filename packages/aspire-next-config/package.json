@@ -1,0 +1,19 @@
+{
+  "name": "@aspire/next-config",
+  "description": "Shared Next.js configuration for Aspire projects",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "types": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "next": "15.1.3"
+  }
+}

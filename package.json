@@ -1,0 +1,61 @@
+{
+  "name": "webapp-customer-react",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "build": "turbo run build",
+    "build:webapp-customer": "turbo run build --filter=webapp-customer",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prune-install": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm pnpm-lock.yaml && pnpm i -f"
+  },
+  "devDependencies": {
+    "@aspire/eslint-config": "workspace:*",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@svgr/webpack": "^8.1.0",
+    "@turbo/gen": "^1.13.3",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "eslint": "^9.17.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "turbo": "^2.3.3",
+    "typescript": "5.7.3",
+    "vite": "^5.2.11",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "@aspire/next-config": "workspace:*",
+    "@aspire/shared": "workspace:*",
+    "@aspire/ui": "workspace:*",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@next/third-parties": "^15.1.3",
+    "date-fns": "^3.6.0",
+    "lodash": "^4.17.21",
+    "lottie-react": "^2.4.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-hook-form": "^7.51.4",
+    "react-intersection-observer": "^9.10.2",
+    "usehooks-ts": "^3.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0",
+      "@types/react": "19.0.2",
+      "@types/react-dom": "19.0.2"
+    }
+  },
+  "packageManager": "pnpm@9.15.1"
+}

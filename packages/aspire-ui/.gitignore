@@ -1,0 +1,8 @@
+dist
+storybook-static
+
+stats.html
+
+build-storybook.log
+
+chromatic.log

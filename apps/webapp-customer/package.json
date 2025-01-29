@@ -1,0 +1,67 @@
+{
+  "name": "webapp-customer",
+  "version": "1.28.2",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build-start:standalone": "rm -rf .next && pnpm build && cp -r public .next/standalone/apps/webapp-customer && cp -r .next/static .next/standalone/apps/webapp-customer/.next/ && node .next/standalone/apps/webapp-customer/server.js",
+    "start-test": "rm -rf .next && NEXT_PUBLIC_IS_TEST_ENV=true pnpm build && cp -r public .next/standalone/apps/webapp-customer && cp -r .next/static .next/standalone/apps/webapp-customer/.next/ && node .next/standalone/apps/webapp-customer/server.js",
+    "start-test-dev": "NEXT_PUBLIC_IS_TEST_ENV=true pnpm turbo dev",
+    "lint": "eslint .",
+    "check-types": "tsc --pretty --noEmit"
+  },
+  "dependencies": {
+    "@aspire/next-config": "workspace:*",
+    "@aspire/shared": "workspace:*",
+    "@aspire/ui": "workspace:*",
+    "@fontsource/inter": "^5.0.18",
+    "@next/bundle-analyzer": "^14.2.3",
+    "@reduxjs/toolkit": "^2.5.1",
+    "@serwist/next": "^9.0.11",
+    "@types/node": "^20.12.12",
+    "dayjs": "^1.11.11",
+    "framer-motion": "^11.2.10",
+    "libphonenumber-js": "^1.11.1",
+    "next": "15.1.6",
+    "next-intl": "^3.26.3",
+    "next-usequerystate": "^1.17.4",
+    "oidc-client-ts": "^3.0.1",
+    "react-oidc-context": "^3.1.0",
+    "react-redux": "^9.1.2",
+    "serwist": "^9.0.11"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@jest/globals": "^29.7.0",
+    "@percy/cli": "^1.28.6",
+    "@percy/cypress": "^3.1.2",
+    "@rtk-query/codegen-openapi": "^1.2.0",
+    "@storybook/addon-essentials": "^8.3.5",
+    "@storybook/addon-interactions": "^8.3.5",
+    "@storybook/addon-links": "^8.3.5",
+    "@storybook/blocks": "^8.3.5",
+    "@storybook/experimental-nextjs-vite": "^8.4.7",
+    "@storybook/react": "^8.1.1",
+    "@storybook/test": "^8.3.5",
+    "@testing-library/react": "^15.0.7",
+    "@types/lodash": "^4.17.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mock-socket": "^9.3.1",
+    "msw": "^2.4.11",
+    "msw-storybook-addon": "^2.0.3",
+    "replace-in-file": "^7.1.0",
+    "start-server-and-test": "^2.0.3",
+    "storybook": "^8.3.5",
+    "swagger-typescript-api": "^13.0.21",
+    "ts-jest": "^29.1.2",
+    "tsconfig": "workspace:*"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

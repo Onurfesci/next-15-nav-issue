@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/react.tsconfig.json",
+  "include": ["src", "next-env.d.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": true
+  },
+  "exclude": ["dist", "build", "node_modules", "out"]
+}
